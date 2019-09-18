@@ -47,7 +47,7 @@ class Tickets extends Component {
                 data: data,
                 loaded: true
             });
-        }, 1000);
+        }, 2000);
     }
 
 
@@ -69,7 +69,7 @@ class Tickets extends Component {
             return <div className="animated fadeIn">
 
                 <Modal isOpen={this.state.modal} toggle={this.modalClick}
-                       className={'modal ' + this.props.className}>
+                       className={this.props.className}>
                     <ModalHeader
                         toggle={this.modalClick}>Ticket details</ModalHeader>
                     <ModalBody>
@@ -80,6 +80,7 @@ class Tickets extends Component {
                 <Card>
                     <CardHeader>Created by me</CardHeader>
                     <CardBody>
+
                         <CustomTable
                             data={this.state.data}
                             columns={this.columns}

@@ -13,33 +13,31 @@ export function getHeaders(columns) {
     </tr>;
 }
 
-export function getContent(data, columns, handleClick) {
-
-    return data.map((item, keyItem) => {
-        let cells = columns.map((columnData, columnKey) => {
-            let column = columnData.dataField;
-            let cellData = item[column];
-
-            return <td key={columnKey}>{cellData}</td>
-        });
-
-        return (
-            <tr key={keyItem} onClick={() => handleClick(item)}>
-                {cells}
-            </tr>
-        );
-    });
-
-
-}
 
 
 class CustomTable extends Component {
 
+    getContent(data, columns, handleClick) {
+        return data.map((item, keyItem) => {
+            let cells = columns.map((columnData, columnKey) => {
+                let column = columnData.dataField;
+                let cellData = item[column];
+
+                return <td key={columnKey}>{cellData}</td>
+            });
+
+            return (
+                <tr key={keyItem} onClick={() => this.props.detailsClick(item)}>
+                    {cells}
+                </tr>
+            );
+        });
+    }
+
     render() {
 
         let headers = getHeaders(this.props.columns);
-        let content = getContent(this.props.data, this.props.columns);
+        let content = this.getContent(this.props.data, this.props.columns);
 
         if (headers && content) {
             return <Table responsive striped hover>
