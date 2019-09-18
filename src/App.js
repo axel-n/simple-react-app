@@ -8,7 +8,9 @@ class App extends Component {
         return (
 
             <Card>
-                <CardHeader>Simple react app</CardHeader>
+                <CardHeader style={{backgroundColor: '#565656'}} className="text-white">
+                    Simple react app
+                </CardHeader>
 
                 <CardBody>
                     <Tickets/>
