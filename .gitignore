@@ -1,5 +1,5 @@
 # webstorm
-.idea
+.idea/
 *.iml
 
 # npm libs
