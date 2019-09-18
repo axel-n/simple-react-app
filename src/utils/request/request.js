@@ -1,10 +1,22 @@
 import React from "react";
-import tickets from "../../mocks/tickets.json"
 
+function mockDelay() {
+    return  new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("result");
+        }, 1000);
+    });
+}
 
 export function sendRequest(method, url, params) {
+    let data = require('../../mocks/tickets.json');
 
-    return null;
+    return mockDelay()
+        .then(() => {
+        return new Promise(function(resolve) {
+            resolve(data);
+        });
+    })
 }
 
 export function loading() {

@@ -40,14 +40,15 @@ class Tickets extends Component {
 
 
     getData() {
-        let data = require('../mocks/tickets.json');
+        return request.sendRequest("GET", "/tickets")
+            .then(data => {
 
-        setTimeout(() => {
-            this.setState({
-                data: data,
-                loaded: true
-            });
-        }, 2000);
+                this.setState({
+                    data: data,
+                    loaded: true
+                });
+            })
+
     }
 
 
@@ -165,8 +166,8 @@ class Tickets extends Component {
         } else {
             return request.loading();
         }
-        }
+    }
 
-        }
+}
 
-        export default Tickets;
+export default Tickets;
