@@ -1,0 +1,9 @@
+# webstorm
+.idea
+*.iml
+
+# npm libs
+node_modules/
+
+# compile js
+build/
