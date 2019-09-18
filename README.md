@@ -1,4 +1,9 @@
 # Simple react app
+[continue](https://github.com/axel-n/template-react-spring)
+
+## Required
+- min knowledge html
+- min knowledge js
 
 ## How to use
 - npm install

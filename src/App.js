@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Tickets from "./views/Tickets";
+import Tickets from "./views/Tickets/Tickets";
 import {Card, CardBody, CardHeader} from "reactstrap";
 
 class App extends Component {
