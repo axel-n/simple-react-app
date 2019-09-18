@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {
     Card,
-    CardBody, Col, FormGroup, Input, Label,
+    CardBody,
     Modal,
     ModalBody,
-    ModalHeader, Row,
+    ModalHeader,
 } from "reactstrap";
 import CardHeader from "reactstrap/es/CardHeader";
 import CustomTable from "../CustomTable";
